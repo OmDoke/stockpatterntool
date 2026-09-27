@@ -216,3 +216,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Environment files (keep .env.example, ignore actual .env)
+.env
+
+# Generated reports (committed by GitHub Actions, not manually)
+reports/*.md
+!reports/.gitkeep
+test_console_demo.py
