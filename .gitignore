@@ -220,7 +220,6 @@ __marimo__/
 # Environment files (keep .env.example, ignore actual .env)
 .env
 
-# Generated reports (committed by GitHub Actions, not manually)
-reports/*.md
-!reports/.gitkeep
+# Generated reports are committed by GitHub Actions workflow
+# Do not gitignore them — the workflow needs to push them
 test_console_demo.py
