@@ -297,6 +297,18 @@ def main():
     with open(f"reports/{today}.md", "w", encoding="utf-8") as f:
         f.write(report)
 
+    # Generate HTML report
+    from reports.html_report import generate_html_report
+    html_report = generate_html_report(today, index_details, stock_details)
+
+    with open("reports/latest.html", "w", encoding="utf-8") as f:
+        f.write(html_report)
+
+    with open(f"reports/{today}.html", "w", encoding="utf-8") as f:
+        f.write(html_report)
+
+    logger.info("Reports saved: reports/latest.md, reports/latest.html")
+
     # Print to console — replace emojis with '?' on Windows (cp1252 can't render them)
     import sys as _sys
     _sys.stdout.buffer.write(report.encode(_sys.stdout.encoding or "utf-8", errors="replace"))
