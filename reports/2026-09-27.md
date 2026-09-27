@@ -1,0 +1,201 @@
+# Daily Pattern Scan & Trade Signals - 2026-09-27
+
+> Educational tool only - not financial advice. Always do your own research.
+
+---
+
+## INDEX OPTIONS SIGNALS
+
+| Index | Interval | Pattern | Action | Strike | OTM Strike | Index SL | Index Target |
+|-------|----------|---------|--------|--------|------------|----------|--------------|
+| NIFTY | 1d | Bearish Engulfing | ⏸️ **WAIT** | - | - | - | - |
+| NIFTY | 1h | Bullish Engulfing | 📗 **BUY CE** | NIFTY 23200 CE | NIFTY 23250 CE | 23024.8 | 23371.9 |
+| NIFTY | 15m | Evening Star | ⏸️ **WAIT** | - | - | - | - |
+| BANKNIFTY | 1d | Bullish Engulfing | 📗 **BUY CE** | BANKNIFTY 55700 CE | BANKNIFTY 55800 CE | 55302.5 | 56136.2 |
+| BANKNIFTY | 1h | Bullish Engulfing | 📗 **BUY CE** | BANKNIFTY 55700 CE | BANKNIFTY 55800 CE | 55302.5 | 56136.2 |
+| BANKNIFTY | 15m | Bullish Engulfing | ⏸️ **WAIT** | - | - | - | - |
+
+### Index Details
+
+#### ⏸️ NIFTY (1d) - WAIT
+
+- **Pattern:** Bearish Engulfing (bearish)
+- **Detected on:** 2026-09-22
+- **Current Level:** 23140.50
+- **ATM Strike:** 23150
+- **Confidence:** ... (0/3)
+
+> Bearish Engulfing detected on NIFTY but confirmation weak (0/3). Skip.
+
+#### 📗 NIFTY (1h) - BUY CE
+
+- **Pattern:** Bullish Engulfing (bullish)
+- **Detected on:** 2026-09-25 13:15
+- **Current Level:** 23140.50
+- **ATM Strike:** 23150
+- **Confidence:** *.. (1/3)
+
+**Options Trade Plan:**
+- Buy: **NIFTY 23200 CE**
+- Cheaper alternative: **NIFTY 23250 CE** (OTM, lower premium)
+- Index Stop-Loss: **23024.8**
+- Index Target: **23371.9**
+
+> Moderate bullish signal on NIFTY. Consider buying NIFTY 23200 CE (or 23250 CE for lower premium). Index SL: 23024.8, Target: 23371.9. Forms at end of downtrend — classic reversal setup
+
+#### ⏸️ NIFTY (15m) - WAIT
+
+- **Pattern:** Evening Star (bearish)
+- **Detected on:** 2026-09-25 12:30
+- **Current Level:** 23140.50
+- **ATM Strike:** 23150
+- **Confidence:** ... (0/3)
+
+> Evening Star detected on NIFTY but confirmation weak (0/3). Skip.
+
+#### 📗 BANKNIFTY (1d) - BUY CE
+
+- **Pattern:** Bullish Engulfing (bullish)
+- **Detected on:** 2026-09-23
+- **Current Level:** 55580.40
+- **ATM Strike:** 55600
+- **Confidence:** *.. (1/3)
+
+**Options Trade Plan:**
+- Buy: **BANKNIFTY 55700 CE**
+- Cheaper alternative: **BANKNIFTY 55800 CE** (OTM, lower premium)
+- Index Stop-Loss: **55302.5**
+- Index Target: **56136.2**
+
+> Moderate bullish signal on BANKNIFTY. Consider buying BANKNIFTY 55700 CE (or 55800 CE for lower premium). Index SL: 55302.5, Target: 56136.2. Forms at end of downtrend — classic reversal setup
+
+#### 📗 BANKNIFTY (1h) - BUY CE
+
+- **Pattern:** Bullish Engulfing (bullish)
+- **Detected on:** 2026-09-25 13:15
+- **Current Level:** 55580.40
+- **ATM Strike:** 55600
+- **Confidence:** *.. (1/3)
+
+**Options Trade Plan:**
+- Buy: **BANKNIFTY 55700 CE**
+- Cheaper alternative: **BANKNIFTY 55800 CE** (OTM, lower premium)
+- Index Stop-Loss: **55302.5**
+- Index Target: **56136.2**
+
+> Moderate bullish signal on BANKNIFTY. Consider buying BANKNIFTY 55700 CE (or 55800 CE for lower premium). Index SL: 55302.5, Target: 56136.2. Forms at end of downtrend — classic reversal setup
+
+#### ⏸️ BANKNIFTY (15m) - WAIT
+
+- **Pattern:** Bullish Engulfing (bullish)
+- **Detected on:** 2026-09-25 15:15
+- **Current Level:** 55580.40
+- **ATM Strike:** 55600
+- **Confidence:** ... (0/3)
+
+> Bullish Engulfing detected on BANKNIFTY but confirmation weak (0/3). Skip.
+
+---
+
+## STOCK SIGNALS
+
+| Stock | Pattern | Action | Entry | Stop-Loss | Target | Risk |
+|-------|---------|--------|-------|-----------|--------|------|
+| RELIANCE | Doji | 👀 **WATCH** | - | - | - | - |
+| TCS | Inverted Hammer | 📗 **BUY** | 2200.8 | 2183.14 | 2236.12 | 0.8% |
+| INFY | Doji | 👀 **WATCH** | - | - | - | - |
+| SBIN | Bearish Engulfing | ⏸️ **WAIT** | - | - | - | - |
+| HDFCBANK | Shooting Star | 📕 **SELL** | 738.6 | 749.83 | 716.14 | 1.52% |
+
+### Stock Details
+
+#### 👀 RELIANCE.NS - WATCH
+
+- **Pattern:** Doji (neutral)
+- **Detected on:** 2026-09-17
+- **Current Price:** 1226.00
+- **Confidence:** ... (0/3)
+- **Why:** No strong confirmation from RSI/volume/trend — weaker signal
+
+> Doji shows indecision. Wait for next candle to confirm direction.
+
+#### 📗 TCS.NS - BUY
+
+- **Pattern:** Inverted Hammer (bullish)
+- **Detected on:** 2026-09-11
+- **Current Price:** 2082.00
+- **Confidence:** *.. (1/3)
+- **Why:** Forms at end of downtrend — classic reversal setup
+
+**Trade Plan:**
+- Entry: **2200.8**
+- Stop-Loss: **2183.14** (0.8% risk)
+- Target: **2236.12** (Risk-Reward 1:2)
+
+> Moderate BUY signal. Inverted Hammer (1/3 confirmation). Enter near 2200.8, stop-loss at 2183.14 (0.8% risk), target 2236.12. Forms at end of downtrend — classic reversal setup
+
+#### 👀 INFY.NS - WATCH
+
+- **Pattern:** Doji (neutral)
+- **Detected on:** 2026-09-25
+- **Current Price:** 1000.20
+- **Confidence:** ... (0/3)
+- **Why:** No strong confirmation from RSI/volume/trend — weaker signal
+
+> Doji shows indecision. Wait for next candle to confirm direction.
+
+#### ⏸️ SBIN.NS - WAIT
+
+- **Pattern:** Bearish Engulfing (bearish)
+- **Detected on:** 2026-09-22
+- **Current Price:** 983.00
+- **Confidence:** ... (0/3)
+- **Why:** No strong confirmation from RSI/volume/trend — weaker signal
+
+> Bearish Engulfing detected but confirmation is weak (0/3). Skip this trade.
+
+#### 📕 HDFCBANK.NS - SELL
+
+- **Pattern:** Shooting Star (bearish)
+- **Detected on:** 2026-09-22
+- **Current Price:** 735.60
+- **Confidence:** *.. (1/3)
+- **Why:** Forms at end of uptrend — classic reversal setup
+
+**Trade Plan:**
+- Entry: **738.6**
+- Stop-Loss: **749.83** (1.52% risk)
+- Target: **716.14** (Risk-Reward 1:2)
+
+> Moderate SELL/EXIT signal. Shooting Star (1/3 confirmation). Exit/short near 738.6, stop-loss at 749.83 (1.52% risk), target 716.14. Forms at end of uptrend — classic reversal setup
+
+---
+
+## How to Use This Report
+
+### Stock Signals
+- **BUY** - Buy the stock at next morning's open near entry price
+- **SELL** - Exit/short the stock at next morning's open
+
+### Options Signals
+- **BUY CE** - Buy Call option at the suggested strike (bullish view)
+- **BUY PE** - Buy Put option at the suggested strike (bearish view)
+- Use the **OTM strike** for lower premium (higher risk, higher reward)
+- Use the **ATM strike** for safer trades (higher premium, lower risk)
+
+### Common Rules
+- **WAIT** - Signal too weak, skip this trade
+- **WATCH** - Market undecided (Doji), wait for next candle
+
+### Intraday vs Daily
+- **1d** (Daily) = Swing trade (hold 1-5 days)
+- **1h** (Hourly) = Intraday/short-term (hold hours to 1 day)
+- **15m** (15-min) = Scalping/quick intraday (hold minutes to hours)
+
+**Risk Management:**
+- Never risk more than 2% of your capital on a single trade
+- Always place a stop-loss immediately after entry
+- For options: your max loss is the premium paid
+- If index gaps significantly at open, skip the trade
+
+> *This is an educational tool. Past patterns do not guarantee future results. Always do your own research before trading.*
