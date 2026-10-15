@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Pattern Scan - 2026-10-15</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: #0f0f1a;
+            color: #e0e0e0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+
+        /* Header */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid #2a2a4a;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        .header .date { color: #888; font-size: 0.95rem; }
+        .header .disclaimer {
+            color: #666;
+            font-size: 0.8rem;
+            margin-top: 8px;
+            padding: 6px 16px;
+            background: #1a1a2e;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* Section titles */
+        .section-title {
+            font-size: 1.4rem;
+            color: #fff;
+            margin: 30px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #2a2a4a;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-title .icon { font-size: 1.6rem; }
+
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 24px;
+            background: #16162a;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        th {
+            background: #1e1e3a;
+            color: #aaa;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            padding: 12px 16px;
+            text-align: left;
+        }
+        td {
+            padding: 10px 16px;
+            border-bottom: 1px solid #1e1e3a;
+            font-size: 0.9rem;
+        }
+        tr:last-child td { border-bottom: none; }
+        tr:hover { background: #1a1a35; }
+
+        /* Action badges in table */
+        td.buy { color: #4ade80; font-weight: 700; }
+        td.sell { color: #f87171; font-weight: 700; }
+        td.wait { color: #888; font-weight: 600; }
+
+        /* Cards */
+        .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 16px; margin-bottom: 30px; }
+        .card {
+            background: #16162a;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #2a2a4a;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+        .buy-card { border-left: 4px solid #4ade80; }
+        .sell-card { border-left: 4px solid #f87171; }
+        .wait-card { border-left: 4px solid #666; }
+
+        .card-header {
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #1a1a35;
+        }
+        .badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge.buy { background: #064e3b; color: #4ade80; }
+        .badge.sell { background: #450a0a; color: #f87171; }
+        .badge.wait { background: #333; color: #aaa; }
+        .symbol { font-weight: 700; font-size: 1.1rem; color: #fff; }
+
+        .card-body { padding: 16px; }
+        .info-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 0.88rem; }
+        .info-row span:first-child { color: #888; }
+
+        .trade-plan {
+            background: #1a1a35;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 12px 0;
+        }
+        .trade-plan h4 { color: #aaa; font-size: 0.8rem; text-transform: uppercase; margin-bottom: 10px; }
+        .metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+        .metric { display: flex; flex-direction: column; }
+        .metric .label { font-size: 0.7rem; color: #666; text-transform: uppercase; }
+        .metric .value { font-size: 0.95rem; font-weight: 600; color: #e0e0e0; }
+        .metric .value.sl { color: #f87171; }
+        .metric .value.target { color: #4ade80; }
+
+        .reason {
+            margin-top: 12px;
+            padding: 10px;
+            background: #1a1a35;
+            border-radius: 6px;
+            font-size: 0.82rem;
+            color: #999;
+            line-height: 1.5;
+            border-left: 3px solid #2a2a4a;
+        }
+
+        /* Stars */
+        .star { color: #333; font-size: 1.1rem; }
+        .star.filled { color: #fbbf24; }
+
+        /* Guide section */
+        .guide {
+            background: #16162a;
+            border-radius: 12px;
+            padding: 24px;
+            margin-top: 30px;
+        }
+        .guide h3 { color: #fff; margin-bottom: 16px; }
+        .guide h4 { color: #aaa; margin: 14px 0 6px; font-size: 0.9rem; }
+        .guide ul { padding-left: 20px; }
+        .guide li { color: #999; font-size: 0.85rem; padding: 3px 0; }
+        .guide li strong { color: #e0e0e0; }
+
+        .footer {
+            text-align: center;
+            color: #555;
+            font-size: 0.75rem;
+            padding: 30px 0 10px;
+            border-top: 1px solid #1e1e3a;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .cards { grid-template-columns: 1fr; }
+            .metrics { grid-template-columns: 1fr; }
+            body { padding: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Stock & Index Pattern Scanner</h1>
+            <div class="date">Daily Scan Report - 2026-10-15</div>
+            <div class="disclaimer">Educational tool only - not financial advice</div>
+        </div>
+
+        <!-- INDEX OPTIONS SIGNALS -->
+        <div class="section-title"><span class="icon">📈</span> Index Options Signals</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Index</th><th>Interval</th><th>Pattern</th><th>Action</th>
+                    <th>Strike</th><th>OTM Strike</th><th>Index SL</th><th>Index Target</th>
+                </tr>
+            </thead>
+            <tbody><tr><td>NIFTY</td><td>1d</td><td>Morning Star</td><td class="buy">BUY CE</td><td>NIFTY 23050 CE</td><td>NIFTY 23100 CE</td><td>22882.36</td><td>23227.32</td></tr><tr><td>NIFTY</td><td>1h</td><td>Evening Star</td><td class="sell">BUY PE</td><td>NIFTY 22950 PE</td><td>NIFTY 22900 PE</td><td>23112.34</td><td>22767.38</td></tr><tr><td>NIFTY</td><td>15m</td><td>Evening Star</td><td class="sell">BUY PE</td><td>NIFTY 23000 PE</td><td>NIFTY 22950 PE</td><td>23112.34</td><td>22767.38</td></tr><tr><td>BANKNIFTY</td><td>1d</td><td>Bullish Engulfing</td><td class="buy">BUY CE</td><td>BANKNIFTY 55900 CE</td><td>BANKNIFTY 56000 CE</td><td>55531.45</td><td>56368.61</td></tr><tr><td>BANKNIFTY</td><td>1h</td><td>Morning Star</td><td class="wait">WAIT</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>BANKNIFTY</td><td>15m</td><td>Bullish Engulfing</td><td class="wait">WAIT</td><td>-</td><td>-</td><td>-</td><td>-</td></tr></tbody>
+        </table>
+
+        <div class="cards">
+        <div class="card buy-card">
+            <div class="card-header">
+                <span class="badge buy">BUY CE</span>
+                <span class="symbol">NIFTY (1d)</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Morning Star</strong> (bullish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-06</div>
+                <div class="info-row"><span>Current Level:</span> 22997.35</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star filled">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+            <div class="trade-plan">
+                <h4>Options Trade Plan</h4>
+                <div class="metrics">
+                    <div class="metric"><span class="label">Buy</span><span class="value">NIFTY 23050 CE</span></div>
+                    <div class="metric"><span class="label">Alternative (OTM)</span><span class="value">NIFTY 23100 CE</span></div>
+                    <div class="metric"><span class="label">Index SL</span><span class="value sl">22882.36</span></div>
+                    <div class="metric"><span class="label">Index Target</span><span class="value target">23227.32</span></div>
+                </div>
+            </div>
+                <div class="reason">Moderate bullish signal on NIFTY. Consider buying NIFTY 23050 CE (or 23100 CE for lower premium). Index SL: 22882.36, Target: 23227.32. Forms at end of downtrend — classic reversal setup</div>
+            </div>
+        </div>
+        <div class="card sell-card">
+            <div class="card-header">
+                <span class="badge sell">BUY PE</span>
+                <span class="symbol">NIFTY (1h)</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Evening Star</strong> (bearish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-14 12:15</div>
+                <div class="info-row"><span>Current Level:</span> 22997.35</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star filled">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+            <div class="trade-plan">
+                <h4>Options Trade Plan</h4>
+                <div class="metrics">
+                    <div class="metric"><span class="label">Buy</span><span class="value">NIFTY 22950 PE</span></div>
+                    <div class="metric"><span class="label">Alternative (OTM)</span><span class="value">NIFTY 22900 PE</span></div>
+                    <div class="metric"><span class="label">Index SL</span><span class="value sl">23112.34</span></div>
+                    <div class="metric"><span class="label">Index Target</span><span class="value target">22767.38</span></div>
+                </div>
+            </div>
+                <div class="reason">Moderate bearish signal on NIFTY. Consider buying NIFTY 22950 PE (or 22900 PE for lower premium). Index SL: 23112.34, Target: 22767.38. Forms at end of uptrend — classic reversal setup</div>
+            </div>
+        </div>
+        <div class="card sell-card">
+            <div class="card-header">
+                <span class="badge sell">BUY PE</span>
+                <span class="symbol">NIFTY (15m)</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Evening Star</strong> (bearish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-15 14:00</div>
+                <div class="info-row"><span>Current Level:</span> 22997.35</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9733;</span></div>
+                
+            <div class="trade-plan">
+                <h4>Options Trade Plan</h4>
+                <div class="metrics">
+                    <div class="metric"><span class="label">Buy</span><span class="value">NIFTY 23000 PE</span></div>
+                    <div class="metric"><span class="label">Alternative (OTM)</span><span class="value">NIFTY 22950 PE</span></div>
+                    <div class="metric"><span class="label">Index SL</span><span class="value sl">23112.34</span></div>
+                    <div class="metric"><span class="label">Index Target</span><span class="value target">22767.38</span></div>
+                </div>
+            </div>
+                <div class="reason">Strong bearish signal on NIFTY. Consider buying NIFTY 23000 PE (or 22950 PE for lower premium). Index SL: 23112.34, Target: 22767.38. RSI 75 (overbought) supports bearish reversal; Forms at end of uptrend — classic reversal setup</div>
+            </div>
+        </div>
+        <div class="card buy-card">
+            <div class="card-header">
+                <span class="badge buy">BUY CE</span>
+                <span class="symbol">BANKNIFTY (1d)</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Bullish Engulfing</strong> (bullish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-13</div>
+                <div class="info-row"><span>Current Level:</span> 55810.50</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star filled">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+            <div class="trade-plan">
+                <h4>Options Trade Plan</h4>
+                <div class="metrics">
+                    <div class="metric"><span class="label">Buy</span><span class="value">BANKNIFTY 55900 CE</span></div>
+                    <div class="metric"><span class="label">Alternative (OTM)</span><span class="value">BANKNIFTY 56000 CE</span></div>
+                    <div class="metric"><span class="label">Index SL</span><span class="value sl">55531.45</span></div>
+                    <div class="metric"><span class="label">Index Target</span><span class="value target">56368.61</span></div>
+                </div>
+            </div>
+                <div class="reason">Moderate bullish signal on BANKNIFTY. Consider buying BANKNIFTY 55900 CE (or 56000 CE for lower premium). Index SL: 55531.45, Target: 56368.61. Forms at end of downtrend — classic reversal setup</div>
+            </div>
+        </div>
+        <div class="card wait-card">
+            <div class="card-header">
+                <span class="badge wait">WAIT</span>
+                <span class="symbol">BANKNIFTY (1h)</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Morning Star</strong> (bullish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-14 14:15</div>
+                <div class="info-row"><span>Current Level:</span> 55810.50</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+                <div class="reason">Morning Star detected on BANKNIFTY but confirmation weak (0/3). Skip.</div>
+            </div>
+        </div>
+        <div class="card wait-card">
+            <div class="card-header">
+                <span class="badge wait">WAIT</span>
+                <span class="symbol">BANKNIFTY (15m)</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Bullish Engulfing</strong> (bullish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-15 15:15</div>
+                <div class="info-row"><span>Current Level:</span> 55810.50</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+                <div class="reason">Bullish Engulfing detected on BANKNIFTY but confirmation weak (0/3). Skip.</div>
+            </div>
+        </div></div>
+
+        <!-- STOCK SIGNALS -->
+        <div class="section-title"><span class="icon">📊</span> Stock Signals</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stock</th><th>Pattern</th><th>Action</th>
+                    <th>Entry</th><th>Stop-Loss</th><th>Target</th><th>Risk</th>
+                </tr>
+            </thead>
+            <tbody><tr><td>RELIANCE</td><td>Morning Star</td><td class="buy">BUY</td><td>1174.6</td><td>1161.43</td><td>1200.94</td><td>1.12%</td></tr><tr><td>TCS</td><td>Doji</td><td class="wait">WATCH</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>INFY</td><td>Morning Star</td><td class="buy">BUY</td><td>1023.4</td><td>1006.12</td><td>1057.96</td><td>1.69%</td></tr><tr><td>SBIN</td><td>Doji</td><td class="wait">WATCH</td><td>-</td><td>-</td><td>-</td><td>-</td></tr><tr><td>HDFCBANK</td><td>Bearish Engulfing</td><td class="sell">SELL</td><td>704.8</td><td>735.85</td><td>642.7</td><td>4.41%</td></tr></tbody>
+        </table>
+
+        <div class="cards">
+        <div class="card buy-card">
+            <div class="card-header">
+                <span class="badge buy">BUY</span>
+                <span class="symbol">RELIANCE.NS</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Morning Star</strong> (bullish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-14</div>
+                <div class="info-row"><span>Current Price:</span> Rs. 1215.00</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star filled">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+            <div class="trade-plan">
+                <h4>Trade Plan</h4>
+                <div class="metrics">
+                    <div class="metric"><span class="label">Entry</span><span class="value">Rs. 1174.6</span></div>
+                    <div class="metric"><span class="label">Stop-Loss</span><span class="value sl">Rs. 1161.43</span></div>
+                    <div class="metric"><span class="label">Target</span><span class="value target">Rs. 1200.94</span></div>
+                    <div class="metric"><span class="label">Risk</span><span class="value">1.12% (R:R 1:2)</span></div>
+                </div>
+            </div>
+                <div class="reason">Moderate BUY signal. Morning Star (1/3 confirmation). Enter near 1174.6, stop-loss at 1161.43 (1.12% risk), target 1200.94. Forms at end of downtrend — classic reversal setup</div>
+            </div>
+        </div>
+        <div class="card wait-card">
+            <div class="card-header">
+                <span class="badge wait">WATCH</span>
+                <span class="symbol">TCS.NS</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Doji</strong> (neutral)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-15</div>
+                <div class="info-row"><span>Current Price:</span> Rs. 2350.00</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star filled">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+                <div class="reason">Doji shows indecision. Wait for next candle to confirm direction.</div>
+            </div>
+        </div>
+        <div class="card buy-card">
+            <div class="card-header">
+                <span class="badge buy">BUY</span>
+                <span class="symbol">INFY.NS</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Morning Star</strong> (bullish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-09</div>
+                <div class="info-row"><span>Current Price:</span> Rs. 1110.00</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star filled">&#9733;</span><span class="star filled">&#9733;</span><span class="star">&#9733;</span></div>
+                
+            <div class="trade-plan">
+                <h4>Trade Plan</h4>
+                <div class="metrics">
+                    <div class="metric"><span class="label">Entry</span><span class="value">Rs. 1023.4</span></div>
+                    <div class="metric"><span class="label">Stop-Loss</span><span class="value sl">Rs. 1006.12</span></div>
+                    <div class="metric"><span class="label">Target</span><span class="value target">Rs. 1057.96</span></div>
+                    <div class="metric"><span class="label">Risk</span><span class="value">1.69% (R:R 1:2)</span></div>
+                </div>
+            </div>
+                <div class="reason">Strong BUY signal. Morning Star (2/3 confirmation). Enter near 1023.4, stop-loss at 1006.12 (1.69% risk), target 1057.96. Volume 1.4x average — pattern has weight; Forms at end of downtrend — classic reversal setup</div>
+            </div>
+        </div>
+        <div class="card wait-card">
+            <div class="card-header">
+                <span class="badge wait">WATCH</span>
+                <span class="symbol">SBIN.NS</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Doji</strong> (neutral)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-14</div>
+                <div class="info-row"><span>Current Price:</span> Rs. 960.00</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+                <div class="reason">Doji shows indecision. Wait for next candle to confirm direction.</div>
+            </div>
+        </div>
+        <div class="card sell-card">
+            <div class="card-header">
+                <span class="badge sell">SELL</span>
+                <span class="symbol">HDFCBANK.NS</span>
+            </div>
+            <div class="card-body">
+                <div class="info-row"><span>Pattern:</span> <strong>Bearish Engulfing</strong> (bearish)</div>
+                <div class="info-row"><span>Detected:</span> 2026-10-05</div>
+                <div class="info-row"><span>Current Price:</span> Rs. 726.85</div>
+                <div class="info-row"><span>Confidence:</span> <span class="star filled">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span></div>
+                
+            <div class="trade-plan">
+                <h4>Trade Plan</h4>
+                <div class="metrics">
+                    <div class="metric"><span class="label">Entry</span><span class="value">Rs. 704.8</span></div>
+                    <div class="metric"><span class="label">Stop-Loss</span><span class="value sl">Rs. 735.85</span></div>
+                    <div class="metric"><span class="label">Target</span><span class="value target">Rs. 642.7</span></div>
+                    <div class="metric"><span class="label">Risk</span><span class="value">4.41% (R:R 1:2)</span></div>
+                </div>
+            </div>
+                <div class="reason">Moderate SELL/EXIT signal. Bearish Engulfing (1/3 confirmation). Exit/short near 704.8, stop-loss at 735.85 (4.41% risk), target 642.7. Volume 2.1x average — pattern has weight</div>
+            </div>
+        </div></div>
+
+        <!-- GUIDE -->
+        <div class="guide">
+            <h3>How to Use This Report</h3>
+            <h4>Options Signals</h4>
+            <ul>
+                <li><strong>BUY CE</strong> - Buy Call option (bullish view)</li>
+                <li><strong>BUY PE</strong> - Buy Put option (bearish view)</li>
+                <li>Use <strong>OTM strike</strong> for cheaper premium, <strong>ATM</strong> for safer trades</li>
+            </ul>
+            <h4>Stock Signals</h4>
+            <ul>
+                <li><strong>BUY</strong> - Buy at next morning's open near entry price</li>
+                <li><strong>SELL</strong> - Exit/short at next morning's open</li>
+            </ul>
+            <h4>Timeframes</h4>
+            <ul>
+                <li><strong>1d</strong> = Swing trade (1-5 days)</li>
+                <li><strong>1h</strong> = Intraday (hours to 1 day)</li>
+                <li><strong>15m</strong> = Scalping (minutes to hours)</li>
+            </ul>
+            <h4>Risk Management</h4>
+            <ul>
+                <li>Never risk more than 2% of capital on a single trade</li>
+                <li>Always place stop-loss immediately after entry</li>
+                <li>For options: max loss = premium paid</li>
+                <li>Skip the trade if index gaps significantly at open</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            This is an educational tool. Past patterns do not guarantee future results. Always do your own research before trading.
+        </div>
+    </div>
+</body>
+</html>
