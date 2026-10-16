@@ -1,4 +1,4 @@
-# Daily Pattern Scan & Trade Signals - 2026-10-15
+# Daily Pattern Scan & Trade Signals - 2026-10-16
 
 > Educational tool only - not financial advice. Always do your own research.
 
@@ -8,12 +8,12 @@
 
 | Index | Interval | Pattern | Action | Strike | OTM Strike | Index SL | Index Target |
 |-------|----------|---------|--------|--------|------------|----------|--------------|
-| NIFTY | 1d | Morning Star | 📗 **BUY CE** | NIFTY 23050 CE | NIFTY 23100 CE | 22882.36 | 23227.32 |
-| NIFTY | 1h | Evening Star | 📕 **BUY PE** | NIFTY 22950 PE | NIFTY 22900 PE | 23112.34 | 22767.38 |
-| NIFTY | 15m | Evening Star | 📕 **BUY PE** | NIFTY 23000 PE | NIFTY 22950 PE | 23112.34 | 22767.38 |
-| BANKNIFTY | 1d | Bullish Engulfing | 📗 **BUY CE** | BANKNIFTY 55900 CE | BANKNIFTY 56000 CE | 55531.45 | 56368.61 |
-| BANKNIFTY | 1h | Morning Star | ⏸️ **WAIT** | - | - | - | - |
-| BANKNIFTY | 15m | Bullish Engulfing | ⏸️ **WAIT** | - | - | - | - |
+| NIFTY | 1d | Morning Star | 📗 **BUY CE** | NIFTY 23200 CE | NIFTY 23250 CE | 23030.42 | 23377.61 |
+| NIFTY | 1h | Bullish Engulfing | ⏸️ **WAIT** | - | - | - | - |
+| NIFTY | 15m | Bearish Engulfing | 📕 **BUY PE** | NIFTY 23100 PE | NIFTY 23050 PE | 23261.88 | 22914.69 |
+| BANKNIFTY | 1d | Bullish Engulfing | 📗 **BUY CE** | BANKNIFTY 55900 CE | BANKNIFTY 56000 CE | 55564.78 | 56402.44 |
+| BANKNIFTY | 1h | Hammer | ⏸️ **WAIT** | - | - | - | - |
+| BANKNIFTY | 15m | Bearish Engulfing | 📕 **BUY PE** | BANKNIFTY 55700 PE | BANKNIFTY 55600 PE | 56123.22 | 55285.56 |
 
 ### Index Details
 
@@ -21,85 +21,85 @@
 
 - **Pattern:** Morning Star (bullish)
 - **Detected on:** 2026-10-06
-- **Current Level:** 22997.35
-- **ATM Strike:** 23000
+- **Current Level:** 23146.15
+- **ATM Strike:** 23150
 - **Confidence:** *.. (1/3)
 
 **Options Trade Plan:**
-- Buy: **NIFTY 23050 CE**
-- Cheaper alternative: **NIFTY 23100 CE** (OTM, lower premium)
-- Index Stop-Loss: **22882.36**
-- Index Target: **23227.32**
+- Buy: **NIFTY 23200 CE**
+- Cheaper alternative: **NIFTY 23250 CE** (OTM, lower premium)
+- Index Stop-Loss: **23030.42**
+- Index Target: **23377.61**
 
-> Moderate bullish signal on NIFTY. Consider buying NIFTY 23050 CE (or 23100 CE for lower premium). Index SL: 22882.36, Target: 23227.32. Forms at end of downtrend — classic reversal setup
+> Moderate bullish signal on NIFTY. Consider buying NIFTY 23200 CE (or 23250 CE for lower premium). Index SL: 23030.42, Target: 23377.61. Forms at end of downtrend — classic reversal setup
 
-#### 📕 NIFTY (1h) - BUY PE
+#### ⏸️ NIFTY (1h) - WAIT
 
-- **Pattern:** Evening Star (bearish)
-- **Detected on:** 2026-10-14 12:15
-- **Current Level:** 22997.35
-- **ATM Strike:** 23000
-- **Confidence:** *.. (1/3)
+- **Pattern:** Bullish Engulfing (bullish)
+- **Detected on:** 2026-10-16 14:15
+- **Current Level:** 23146.15
+- **ATM Strike:** 23150
+- **Confidence:** ... (0/3)
 
-**Options Trade Plan:**
-- Buy: **NIFTY 22950 PE**
-- Cheaper alternative: **NIFTY 22900 PE** (OTM, lower premium)
-- Index Stop-Loss: **23112.34**
-- Index Target: **22767.38**
-
-> Moderate bearish signal on NIFTY. Consider buying NIFTY 22950 PE (or 22900 PE for lower premium). Index SL: 23112.34, Target: 22767.38. Forms at end of uptrend — classic reversal setup
+> Bullish Engulfing detected on NIFTY but confirmation weak (0/3). Skip.
 
 #### 📕 NIFTY (15m) - BUY PE
 
-- **Pattern:** Evening Star (bearish)
-- **Detected on:** 2026-10-15 14:00
-- **Current Level:** 22997.35
-- **ATM Strike:** 23000
-- **Confidence:** **. (2/3)
+- **Pattern:** Bearish Engulfing (bearish)
+- **Detected on:** 2026-10-16 14:45
+- **Current Level:** 23146.15
+- **ATM Strike:** 23150
+- **Confidence:** *.. (1/3)
 
 **Options Trade Plan:**
-- Buy: **NIFTY 23000 PE**
-- Cheaper alternative: **NIFTY 22950 PE** (OTM, lower premium)
-- Index Stop-Loss: **23112.34**
-- Index Target: **22767.38**
+- Buy: **NIFTY 23100 PE**
+- Cheaper alternative: **NIFTY 23050 PE** (OTM, lower premium)
+- Index Stop-Loss: **23261.88**
+- Index Target: **22914.69**
 
-> Strong bearish signal on NIFTY. Consider buying NIFTY 23000 PE (or 22950 PE for lower premium). Index SL: 23112.34, Target: 22767.38. RSI 75 (overbought) supports bearish reversal; Forms at end of uptrend — classic reversal setup
+> Moderate bearish signal on NIFTY. Consider buying NIFTY 23100 PE (or 23050 PE for lower premium). Index SL: 23261.88, Target: 22914.69. Forms at end of uptrend — classic reversal setup
 
 #### 📗 BANKNIFTY (1d) - BUY CE
 
 - **Pattern:** Bullish Engulfing (bullish)
 - **Detected on:** 2026-10-13
-- **Current Level:** 55810.50
+- **Current Level:** 55844.00
 - **ATM Strike:** 55800
 - **Confidence:** *.. (1/3)
 
 **Options Trade Plan:**
 - Buy: **BANKNIFTY 55900 CE**
 - Cheaper alternative: **BANKNIFTY 56000 CE** (OTM, lower premium)
-- Index Stop-Loss: **55531.45**
-- Index Target: **56368.61**
+- Index Stop-Loss: **55564.78**
+- Index Target: **56402.44**
 
-> Moderate bullish signal on BANKNIFTY. Consider buying BANKNIFTY 55900 CE (or 56000 CE for lower premium). Index SL: 55531.45, Target: 56368.61. Forms at end of downtrend — classic reversal setup
+> Moderate bullish signal on BANKNIFTY. Consider buying BANKNIFTY 55900 CE (or 56000 CE for lower premium). Index SL: 55564.78, Target: 56402.44. Forms at end of downtrend — classic reversal setup
 
 #### ⏸️ BANKNIFTY (1h) - WAIT
 
-- **Pattern:** Morning Star (bullish)
-- **Detected on:** 2026-10-14 14:15
-- **Current Level:** 55810.50
+- **Pattern:** Hammer (bullish)
+- **Detected on:** 2026-10-16 14:15
+- **Current Level:** 55844.00
 - **ATM Strike:** 55800
 - **Confidence:** ... (0/3)
 
-> Morning Star detected on BANKNIFTY but confirmation weak (0/3). Skip.
+> Hammer detected on BANKNIFTY but confirmation weak (0/3). Skip.
 
-#### ⏸️ BANKNIFTY (15m) - WAIT
+#### 📕 BANKNIFTY (15m) - BUY PE
 
-- **Pattern:** Bullish Engulfing (bullish)
-- **Detected on:** 2026-10-15 15:15
-- **Current Level:** 55810.50
+- **Pattern:** Bearish Engulfing (bearish)
+- **Detected on:** 2026-10-16 14:45
+- **Current Level:** 55844.00
 - **ATM Strike:** 55800
-- **Confidence:** ... (0/3)
+- **Confidence:** *.. (1/3)
 
-> Bullish Engulfing detected on BANKNIFTY but confirmation weak (0/3). Skip.
+**Options Trade Plan:**
+- Buy: **BANKNIFTY 55700 PE**
+- Cheaper alternative: **BANKNIFTY 55600 PE** (OTM, lower premium)
+- Index Stop-Loss: **56123.22**
+- Index Target: **55285.56**
+
+> Moderate bearish signal on BANKNIFTY. Consider buying BANKNIFTY 55700 PE (or 55600 PE for lower premium). Index SL: 56123.22, Target: 55285.56. Forms at end of uptrend — classic reversal setup
 
 ---
 
@@ -107,34 +107,34 @@
 
 | Stock | Pattern | Action | Entry | Stop-Loss | Target | Risk |
 |-------|---------|--------|-------|-----------|--------|------|
-| RELIANCE | Morning Star | 📗 **BUY** | 1174.6 | 1161.43 | 1200.94 | 1.12% |
+| RELIANCE | Hammer | 📗 **BUY** | 1211.2 | 1191.88 | 1249.84 | 1.6% |
 | TCS | Doji | 👀 **WATCH** | - | - | - | - |
 | INFY | Morning Star | 📗 **BUY** | 1023.4 | 1006.12 | 1057.96 | 1.69% |
 | SBIN | Doji | 👀 **WATCH** | - | - | - | - |
-| HDFCBANK | Bearish Engulfing | 📕 **SELL** | 704.8 | 735.85 | 642.7 | 4.41% |
+| HDFCBANK | Doji | 👀 **WATCH** | - | - | - | - |
 
 ### Stock Details
 
 #### 📗 RELIANCE.NS - BUY
 
-- **Pattern:** Morning Star (bullish)
-- **Detected on:** 2026-10-14
-- **Current Price:** 1215.00
+- **Pattern:** Hammer (bullish)
+- **Detected on:** 2026-10-16
+- **Current Price:** 1211.20
 - **Confidence:** *.. (1/3)
 - **Why:** Forms at end of downtrend — classic reversal setup
 
 **Trade Plan:**
-- Entry: **1174.6**
-- Stop-Loss: **1161.43** (1.12% risk)
-- Target: **1200.94** (Risk-Reward 1:2)
+- Entry: **1211.2**
+- Stop-Loss: **1191.88** (1.6% risk)
+- Target: **1249.84** (Risk-Reward 1:2)
 
-> Moderate BUY signal. Morning Star (1/3 confirmation). Enter near 1174.6, stop-loss at 1161.43 (1.12% risk), target 1200.94. Forms at end of downtrend — classic reversal setup
+> Moderate BUY signal. Hammer (1/3 confirmation). Enter near 1211.2, stop-loss at 1191.88 (1.6% risk), target 1249.84. Forms at end of downtrend — classic reversal setup
 
 #### 👀 TCS.NS - WATCH
 
 - **Pattern:** Doji (neutral)
 - **Detected on:** 2026-10-15
-- **Current Price:** 2350.00
+- **Current Price:** 2465.00
 - **Confidence:** *.. (1/3)
 - **Why:** Volume 1.9x average — pattern has weight
 
@@ -144,7 +144,7 @@
 
 - **Pattern:** Morning Star (bullish)
 - **Detected on:** 2026-10-09
-- **Current Price:** 1110.00
+- **Current Price:** 1161.20
 - **Confidence:** **. (2/3)
 - **Why:** Volume 1.4x average — pattern has weight; Forms at end of downtrend — classic reversal setup
 
@@ -159,26 +159,21 @@
 
 - **Pattern:** Doji (neutral)
 - **Detected on:** 2026-10-14
-- **Current Price:** 960.00
+- **Current Price:** 962.60
 - **Confidence:** ... (0/3)
 - **Why:** No strong confirmation from RSI/volume/trend — weaker signal
 
 > Doji shows indecision. Wait for next candle to confirm direction.
 
-#### 📕 HDFCBANK.NS - SELL
+#### 👀 HDFCBANK.NS - WATCH
 
-- **Pattern:** Bearish Engulfing (bearish)
-- **Detected on:** 2026-10-05
-- **Current Price:** 726.85
-- **Confidence:** *.. (1/3)
-- **Why:** Volume 2.1x average — pattern has weight
+- **Pattern:** Doji (neutral)
+- **Detected on:** 2026-10-16
+- **Current Price:** 728.85
+- **Confidence:** ... (0/3)
+- **Why:** No strong confirmation from RSI/volume/trend — weaker signal
 
-**Trade Plan:**
-- Entry: **704.8**
-- Stop-Loss: **735.85** (4.41% risk)
-- Target: **642.7** (Risk-Reward 1:2)
-
-> Moderate SELL/EXIT signal. Bearish Engulfing (1/3 confirmation). Exit/short near 704.8, stop-loss at 735.85 (4.41% risk), target 642.7. Volume 2.1x average — pattern has weight
+> Doji shows indecision. Wait for next candle to confirm direction.
 
 ---
 
